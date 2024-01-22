@@ -7,13 +7,118 @@
     <!-- Tailwind and DaisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Manrope:wght@400;500;600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-manrope{
+            font-family: 'Lato', sans-serif;
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+    <!-- Customize Colors -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primary-bg-al': '#FF4240;',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    <header>
-
+<body class="font-manrope">
+    <header class="container mx-auto p-4 lg:p-8">
+        <!-- Navbar -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>                      
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-3xl lg:text-5xl font-extrabold">Hockey<span class="text-primary-bg-al ">'</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-6 text-[#424247]">
+                        <li><a class="hover:text-primary-bg-al font-semibold text-lg">Home</a></li>
+                        <li><a class="hover:text-primary-bg-al text-lg">About</a></li>
+                        <li><a class="hover:text-primary-bg-al text-lg">Pages</a></li>
+                        <li><a class="hover:text-primary-bg-al text-lg">Blog</a></li>
+                        <li><a class="hover:text-primary-bg-al text-lg">Contact</a></li> 
+                    </ul>
+                </div>
+                <div class="navbar-end gap-5">
+                    <img src="Images/search.svg" alt="" class="hidden lg:flex">
+                    <a class="btn bg-primary-bg-al text-white text-xl px-6 font-semibold">Get Ticket</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Banner -->
+        <div class="lg:p-4 lg:mb-[-150px]">
+            <div class="carousel w-full pt-8">
+                <div id="slide1" class="carousel-item relative w-full bg-[url('./images/1.png')] bg-center bg-cover rounded-lg h-[50vh] lg:h-[70vh] flex items-center justify-center">
+                    <div class="absolute lg:bottom-0 lg:left-10 space-x-4 transform -translate-y-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-none">❮</a> 
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full bg-[url('./images/banner2.avif')] bg-center bg-cover rounded-lg h-[50vh] lg:h-[70vh] flex items-center justify-center">
+                    <div class="absolute lg:bottom-0 lg:left-10 space-x-4 transform -translate-y-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-none">❮</a> 
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Absolute Container -->
+            <div class="lg:w-2/5 lg:h-[170px] bg-black shadow-lg mx-auto lg:translate-x-96 lg:-translate-y-56 rounded-lg">
+                <div class="p-10 space-y-4">
+                    <h3 class="text-white text-2xl font-extrabold">Meet all the heroes from the field</h3>
+                    <p class="text-[#FFFFFF99] text-sm font-light">It implies an engaging experience where enthusiasts can explore profiles, stories, and achievements of their favorite hockey heroes. </p>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-
+    <main class="container mx-auto lg:p-8">
+        <!-- Professional Hockey Club -->
+        <div class="flex flex-col">
+            <div class="flex flex-col justify-center items-center space-y-5  mx-w-[400px] border-dashed border-t-2 border-b-2 border-[#13131833] p-10 lg:p-20">
+                <h1 class="text-4xl font-extrabold text-center">Professional Hockeys Club</h1>
+                <p class="text-[#13131899] lg:max-w-[700px] text-center">At Professional Hockeys Club, we embrace the spirit of camaraderie that unites players seasoned enthusiast or just stepping and fans alike. </p>
+            </div>
+            <!-- Radial Progress -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 ">
+                <!-- Radial 1 -->
+                <div class="radial-progress text-red-500" style="--value:87; --size:10rem; --thickness: 1rem;" role="progressbar">
+                    <span class="text-black font-extrabold text-3xl">87%</span>
+                </div>
+                <!-- Radial 2 -->
+                <div class="radial-progress text-green-400" style="--value:95; --size:10rem; --thickness: 1rem;" role="progressbar">
+                    <span class="text-black font-extrabold text-3xl">95%</span>
+                </div>
+                <!-- Radial 3 -->
+                <div class="radial-progress text-yellow-500" style="--value:90; --size:10rem; --thickness: 1rem;" role="progressbar">
+                    <span class="text-black font-extrabold text-3xl">90%</span>
+                </div>
+                <!-- Radial 4 -->
+                <div class="radial-progress text-blue-500" style="--value:80; --size:10rem; --thickness: 1rem;" role="progressbar">
+                    <span class="text-black font-extrabold text-3xl">80%</span>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
 
